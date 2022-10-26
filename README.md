@@ -12,4 +12,4 @@ or
 conda install --file requirements.txt
 ```
 
-The written solutions are either in Markdown or Jupyter notebooks. I recommend using [Visual Studio Code](https://code.visualstudio.com/) with the Markdown and python extensions for the whole project.
+The written solutions are written in LaTeX.
