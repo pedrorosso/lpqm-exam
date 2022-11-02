@@ -1,4 +1,4 @@
-from random import random, seed
+from random import random
 from concurrent.futures import ProcessPoolExecutor
 
 
@@ -81,7 +81,7 @@ def test_bobs_luck(n_trials: int):
                     n_53_score += 1
 
             else:
-                raise ValueError("Shit happened")
+                raise ValueError("Oops, some error happened. Nobody has won the game!")
 
             print(f"{100 * idx / n_trials:.2f} % done", end="\r")
 
@@ -93,6 +93,5 @@ def test_bobs_luck(n_trials: int):
 if __name__ == '__main__':
 
     n_total = 2000000
-    seed(43)  # setting the random engine seed
     n_A_wins, n_B_wins, n_B_wins_with_5_3_score, n_53_score = test_bobs_luck(n_total)
-    print(f"P(Bob wins | 5-3 score) = {n_B_wins_with_5_3_score / n_53_score}")
+    print(f"P(Bob wins | 5-3 score) = {n_B_wins_with_5_3_score / n_53_score:.5f}")
