@@ -1,11 +1,13 @@
 from scipy.constants import Planck, pi, c
 
+
 def solve_quadratic_equation(a: float, b: float, c: float):
     delta: float = b ** 2 - 4 * a * c
     sol1: float = 0.5 * (-b + delta ** 0.5) / a
     sol2: float = 0.5 * (-b - delta ** 0.5) / a
 
     return sol1, sol2
+
 
 # Paper parameters
 beta = 0.19
