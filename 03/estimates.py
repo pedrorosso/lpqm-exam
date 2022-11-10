@@ -31,8 +31,10 @@ p1, p2 = solve_quadratic_equation(a=1, b=b_test, c=c_test)
 R_required = 0.5 * gamma_cavity * (1 + beta ** -1)
 required_threshold_power = Planck * c * R_required / lambda_pump
 
-print(f"Pumping rate R_pump: {R_pump:.3e} photons")
-print(f"Frequency linewidth: {1e-9 * gamma_cavity / (2 * pi):.3f} GHz")
-print(f"Possible photonic populations:\np1: {p1:.5f}\np2: {p2:.5f}")
-print(f"Required photonic pump rate for P = 1: {R_required:.3e} photons")
-print(f"Realistic threshold power: {1e6 * required_threshold_power} mW")
+if __name__ == "__main__":
+
+    print(f"Pumping rate R_pump: {R_pump:.3e} photons")
+    print(f"Frequency linewidth: {1e-9 * gamma_cavity / (2 * pi):.3f} GHz")
+    print(f"Possible photonic populations:\np1: {p1:.5f}\np2: {p2:.5f}")
+    print(f"Required photonic pump rate for P = 1: {R_required:.3e} photons")
+    print(f"Realistic threshold power: {1e6 * required_threshold_power:.3f} mW")

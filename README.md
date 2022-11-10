@@ -12,4 +12,4 @@ or
 conda install --file requirements.txt
 ```
 
-The written solutions are written in LaTeX.
+The PDF in the top directory contains the theoretical answers.

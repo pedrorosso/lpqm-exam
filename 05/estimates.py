@@ -8,7 +8,9 @@ def delta_T(r1: float, r2: float) -> float:
     return 2 * pi * G * mass_earth * m_e / (omega_CS ** 2 * hbar) * abs(r1 ** -1 - r2 ** -1)
 
 
-r_0 = 6370e3
-r_1 = 6470e3
+if __name__ == '__main__':
 
-print(f"Delta T: {1e12 * delta_T(r_0, r_1):.3f} ps")
+    r_0 = 6370e3
+    r_1 = 6470e3
+
+    print(f"Delta T: {1e12 * delta_T(r_0, r_1):.3f} ps")
